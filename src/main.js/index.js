@@ -19,11 +19,13 @@ function populateBreeds() {
 }
 
 function displayCatInfo(cat) {
+    const loader = document.querySelector(".loader");
+  loader.style.display = "none";
   catInfoDiv.innerHTML = `
     <img src="${cat.url}" alt="Cat">
     <h3>${cat.breeds[0].name}</h3>
     <p>${cat.breeds[0].description}</p>
-    <p>Темперамент: ${cat.breeds[0].temperament}</p>
+    <p>Temperament: ${cat.breeds[0].temperament}</p>
   `;
 }
 
