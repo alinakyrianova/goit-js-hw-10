@@ -55,8 +55,10 @@ function handleBreedSelectChange(event) {
       displayError();
     });
 
-  const loaderText = document.querySelector(".loader-text");
-  loaderText.classList.add("is-hidden");
+    const loaderText = document.querySelector(".loader-text");
+    if (loaderText) {
+    loaderText.classList.add("is-hidden");
+  }
 }
 
 breedSelect.addEventListener("change", handleBreedSelectChange);
